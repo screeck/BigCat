@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: white;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    background-color: #1b1b1b;
+    padding: 20px;
+    width: 200px;
+    height: 100vh;
+}
+
+.sidebar h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #5a85ff;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 10px 0;
+}
+
+.sidebar li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.sidebar li.active a {
+    color: #5a85ff;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+.welcome{
+    font-size: large;
+    color: white;
+}
+.no-link-style {
+    text-decoration: none;  
+    color: inherit;         
+}
+.top-button {
+    background-color: #5a85ff;
+    border: none;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #5a85ff;
+}
+
+button {
+    background-color: #5a85ff;
+    border: none;
+    padding: 5px 10px;
+    color: white;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #5a85ff;
+}
+
+button {
+    background-color: #5a85ff;
+    border: none;
+    padding: 5px 10px;
+    color: white;
+    cursor: pointer;
+}

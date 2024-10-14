@@ -1,0 +1,45 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+<h2>Payloads</h2>
+<table>
+    <thead>
+
+        <tr>
+            <th>Name</th>
+            <th>Target OS</th>
+            <th>Target Arch</th>
+            <th>Type</th>
+            <th>Host IP</th>
+            <th>Host PORT</th>
+            <th>Delete</th>
+            <th>Download</th>
+        </tr>
+
+
+    </thead>
+
+    <tbody>
+        {% for payload in payloads %}
+        <tr>
+            <td>{{payload[1]}}</td>
+            <td>{{payload[2]}}</td>
+            <td>{{payload[3]}}</td>
+            <td>{{payload[4]}}</td>
+            <td>{{payload[5]}}</td>
+            <td>{{payload[6]}}</td>
+            <td>
+                <button type="submit">Delete</button>
+            </td>
+            <td>
+                <button type="submit">Download</button>
+            </td>
+           
+        </tr>
+        {% endfor %}
+    </tbody>
+
+</table>
+
+
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+<h2>Payloads</h2>
+<table>
+    <thead>
+
+        <tr>
+            <th>Name</th>
+            <th>HOST</th>
+            <th>PORT</th>
+            <th>PID</th>
+            <th>Connect</th>
+            <th>Delete</th>
+        </tr>
+
+
+    </thead>
+
+    <tbody>
+        {% for listener in listeners %}
+        <tr>
+            <td>{{listener[1]}}</td>
+            <td>{{listener[2]}}</td>
+            <td>{{listener[3]}}</td>
+            <td>{{listener[4]}}</td>
+            <td>{{listener[5]}}</td>
+            <td>{{listener[6]}}</td>
+            <td>
+                <button type="submit">Connect</button>
+            </td>
+            <td>
+                <button type="submit">Delete</button>
+            </td>
+           
+        </tr>
+        {% endfor %}
+    </tbody>
+
+</table>
+
+
+{% endblock %}

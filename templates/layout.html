@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIGCAT</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h1><a href="{{ url_for('welcome')}}" class="no-link-style">BIGCAT</a></h1>
+            <ul>
+                <li class="{{ 'active' if request.endpoint == 'payloads' else '' }}"><a href="{{ url_for('payloads') }}">Payloads</a></li>
+                <li class="{{ 'active' if request.endpoint == 'listeners' else '' }}"><a href="{{ url_for('listeners') }}">Listeners</a></li>
+                <li class="{{ 'active' if request.endpoint == 'connections' else '' }}"><a href="{{ url_for('connections') }}">Active connections</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="header">
+                {% if request.endpoint != 'welcome' and request.endpoint != 'connections'%}
+                <button class="top-button" onclick="handleAddClick()">Add</button>
+                {% endif %}
+            </div>
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+</body>
+</html>
